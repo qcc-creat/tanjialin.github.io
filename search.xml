@@ -23,6 +23,14 @@
 <p><img src="picture%5Cnulling_widen_wide.png" alt="(b)不同深度宽度系数零陷对比曲线"></p>
 <p>上图中可以看出，零陷深度系数$d$不同时，零陷的深度会有差异，$d$越大，零陷越深，旁瓣会略有升高，同时在零陷的宽度系数保持不变时，仿真宽度保持不变；由图(b)得知算法可以同时针对宽度与深度参数进行调整，满足预期要求，需要指出，随着窗宽度和深度系数的提高，旁瓣会随之升高。 </p>
 ]]></content>
+      <categories>
+        <category>阵列信号处理</category>
+      </categories>
+      <tags>
+        <tag>零陷</tag>
+        <tag>阵列信号处理</tag>
+        <tag>Capon谱</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
