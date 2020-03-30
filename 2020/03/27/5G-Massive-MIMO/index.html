@@ -20,6 +20,7 @@
     var CONFIG = {"hostname":"tanjialin.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
+<link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
   <meta name="description" content="修改中 Massive MIMO（大规模天线技术，亦称为Large Scale MIMO）是第五代移动通信（5G）中提高系统容量和频谱利用率的关键技术。此技术中，基站利用同一个时频域资源同时为多个终端进行服务，从而增强了基站同时接收和发送多路不同信号的能力，可以有效的提升频谱利用率、数据传输的稳定性和可靠性。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5G Massive MIMO">
@@ -76,8 +77,9 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
+<link rel="alternate" href="/rss2.xml" title="明月入怀" type="application/rss+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -101,6 +103,7 @@
       <h1 class="site-title">明月入怀</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">积跬步以至千里</p>
   </div>
 
   <div class="site-nav-right">
@@ -208,6 +211,8 @@
         </h1>
 
         <div class="post-meta">
+
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -319,6 +324,16 @@
 
     </div>
 
+
+  <div>
+	
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读 ------</div>
+
+  </div>
+
+
+
     
     
     
@@ -338,7 +353,10 @@
     <a href="/2020/03/23/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E9%87%8D%E6%9E%84%E7%9A%84%E9%9B%B6%E9%99%B7%E5%B1%95%E5%AE%BD%E7%AE%97%E6%B3%95/" rel="prev" title="协方差矩阵重构的零陷展宽算法">
       <i class="fa fa-chevron-left"></i> 协方差矩阵重构的零陷展宽算法
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/30/%E5%B8%B8%E8%A7%84%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/" rel="next" title="常规波束形成">
+      常规波束形成 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -415,7 +433,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -533,6 +551,7 @@
 
 
   <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
 
 
   
@@ -647,7 +666,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 <script type="text/x-mathjax-config">
 
   MathJax.Hub.Config({{ JSON.stringify(config) }});
-
+  
 </script>
 
 <script type="text/x-mathjax-config">

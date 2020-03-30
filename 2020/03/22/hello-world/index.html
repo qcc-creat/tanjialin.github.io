@@ -20,6 +20,7 @@
     var CONFIG = {"hostname":"tanjialin.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
+<link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
   <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
@@ -74,8 +75,9 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
+<link rel="alternate" href="/rss2.xml" title="明月入怀" type="application/rss+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -99,6 +101,7 @@
       <h1 class="site-title">明月入怀</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">积跬步以至千里</p>
   </div>
 
   <div class="site-nav-right">
@@ -206,6 +209,8 @@
         </h1>
 
         <div class="post-meta">
+
+			
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -266,6 +271,16 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
     </div>
+
+
+  <div>
+	
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读 ------</div>
+
+  </div>
+
+
 
     
     
@@ -359,7 +374,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -477,6 +492,7 @@
 
 
   <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
 
 
   
@@ -536,7 +552,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 <script type="text/x-mathjax-config">
 
   MathJax.Hub.Config({{ JSON.stringify(config) }});
-
+  
 </script>
 
 <script type="text/x-mathjax-config">
