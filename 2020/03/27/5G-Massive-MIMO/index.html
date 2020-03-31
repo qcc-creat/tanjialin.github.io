@@ -29,7 +29,7 @@
 <meta property="og:description" content="修改中 Massive MIMO（大规模天线技术，亦称为Large Scale MIMO）是第五代移动通信（5G）中提高系统容量和频谱利用率的关键技术。此技术中，基站利用同一个时频域资源同时为多个终端进行服务，从而增强了基站同时接收和发送多路不同信号的能力，可以有效的提升频谱利用率、数据传输的稳定性和可靠性。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-27T13:54:36.000Z">
-<meta property="article:modified_time" content="2020-03-29T14:23:22.833Z">
+<meta property="article:modified_time" content="2020-03-31T17:08:31.968Z">
 <meta property="article:author" content="Tan Jialin">
 <meta property="article:tag" content="通信">
 <meta property="article:tag" content="阵列信号处理">
@@ -226,7 +226,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-29 22:23:22" itemprop="dateModified" datetime="2020-03-29T22:23:22+08:00">2020-03-29</time>
+                <time title="修改时间：2020-04-01 01:08:31" itemprop="dateModified" datetime="2020-04-01T01:08:31+08:00">2020-04-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -292,7 +292,8 @@
 <h3 id="小区边缘用户体验差"><a href="#小区边缘用户体验差" class="headerlink" title="小区边缘用户体验差"></a>小区边缘用户体验差</h3><p>传统的4G宏站，从小区中心到小区边缘，业务速率会大幅度下滑，解决办法可以考虑如下：<strong>提高发射功率</strong>；<strong>新增站点补盲</strong>，这有悖于蜂窝网络的初衷，会大幅的提升组网费用；<strong>小区间干扰协调</strong>;<strong>波束赋形</strong>，传统的宽波束能量比较分散，作用距离相对较短，该方法可以通过使波束变窄，集中能量，则基站覆盖面积增大，如果能做到这一点，边缘用户的接收sinr会更高，体验也会得到明显提升，这种现象也可以类比相同功率的白炽灯、手电筒和激光笔，光束越窄，作用范围越大。</p>
 <h3 id="垂直覆盖面临困难"><a href="#垂直覆盖面临困难" class="headerlink" title="垂直覆盖面临困难"></a>垂直覆盖面临困难</h3><p>传统4G宏站由于天线垂直波束过窄，架设天线时应着重考虑大多数的地面用户，天线高度不宜过高，所以无法为高层楼提供垂直的覆盖，造成高层楼信号较差。解决办法：<strong>提高基站架设高度</strong>;<strong>多组天线，分别覆盖</strong>;<strong>3D波束赋形</strong>，Massive MIMO 可在水平和垂直两个维度动态调整信号方向，使信号能量更集中、方向更精准，降低小区间的干扰，从而支持更多的用户在相同的时频资源上并行传输(空分复用)，从而达到提升小区吞吐量和边缘用户速率的效果。天线增益的提升，穿墙能力得到提升，实现了广度和深度的要求进行了有效的宽松。</p>
 <p>此时，我们需要考虑，怎样才能有效提高信号的强度呢？提高信号强度，即提高接收到得信号功率，终端接收到的信号的信号功率大小表达式如下:</p>
-<p>其中不能无限的增大发射功率，不能缩短基站和手机之间的距离，低频段资源又十分有限，很难将频带降低，所以无法增大波长，此时只能通过提升天线的数量，把两个天线增益参数再次提升，进而提高接收功率。</p>
+<script type="math/tex; mode=display">
+{ P_ { rx } }  = \frac { { { P_ { tx } } } } { { 4\pi  { R^2 } } } \frac { { { \lambda ^2 } } } { { 4\pi } } { G_ { rx } } { G_ { tx } }</script><p>其中不能无限的增大发射功率${P_{tx}}$，不能缩短基站和手机之间的距离$R$，低频段资源又十分有限，很难将频带降低$\lambda$，所以无法增大波长，此时只能通过提升天线的数量，把两个天线增益参数${G_{rx}}$和${G_{tx}}$再次提升，进而提高接收功率。</p>
 <p>5G采用了高频段，虽然高频信号的传播损耗非常大，但是由于高频段波长短，因此可以在有效的面积内部署更多的天线阵子，通过大规模天线阵列形成具有非常高增益的窄波束来抵消传播损失。这个特点对手机尤为重要，为其实现Massive MIMO奠定了一个非常好的基础。</p>
 <p>Massive MIMO主要存在以下几点优势： </p>
 <ul>
@@ -662,26 +663,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
   }, window.Valine);
 });
-</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-
-  MathJax.Hub.Config({{ JSON.stringify(config) }});
-  
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
