@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tanjialin.github.io/guestbook/index.html</loc>
+    
+    <lastmod>2020-04-01T16:44:49.404Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tanjialin.github.io/about/index.html</loc>
+    
+    <lastmod>2020-04-01T16:42:35.070Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tanjialin.github.io/2018/06/27/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E9%87%8D%E6%9E%84%E7%9A%84%E9%9B%B6%E9%99%B7%E5%B1%95%E5%AE%BD%E7%AE%97%E6%B3%95/</loc>
     
-    <lastmod>2020-04-01T16:15:22.112Z</lastmod>
+    <lastmod>2020-04-01T16:26:21.537Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tanjialin.github.io/2018/03/27/%E5%B8%B8%E8%A7%84%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</loc>
     
-    <lastmod>2020-04-01T16:13:53.334Z</lastmod>
+    <lastmod>2020-04-01T16:21:40.641Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tanjialin.github.io/2018/02/23/hello-world/</loc>
+    
+    <lastmod>2020-04-01T16:21:24.808Z</lastmod>
     
   </url>
   
@@ -26,13 +47,6 @@
     <loc>http://tanjialin.github.io/lib/canvas-nest/README.html</loc>
     
     <lastmod>2020-03-30T12:44:02.286Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tanjialin.github.io/2020/03/22/hello-world/</loc>
-    
-    <lastmod>2020-03-24T15:52:35.977Z</lastmod>
     
   </url>
   

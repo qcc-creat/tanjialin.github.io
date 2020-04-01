@@ -56,21 +56,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/03/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>协方差矩阵重构的零陷展宽算法</title>
     <url>/2018/06/27/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E9%87%8D%E6%9E%84%E7%9A%84%E9%9B%B6%E9%99%B7%E5%B1%95%E5%AE%BD%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h2 id="深度可调节的零陷展宽算法"><a href="#深度可调节的零陷展宽算法" class="headerlink" title="深度可调节的零陷展宽算法"></a>深度可调节的零陷展宽算法</h2><p>在2012年，Y.Gu提出了一种通过利用Capon谱对干扰角度区域阵列流形的协方差矩阵求和，进而获得干扰加噪声协方差矩阵估计的方法。 </p>
@@ -114,8 +99,7 @@ W(\alpha ) = 0.5 - 0.5\cos [\pi (2\alpha  + \Phi )/\Phi ]\\
   <entry>
     <title>常规波束形成</title>
     <url>/2018/03/27/%E5%B8%B8%E8%A7%84%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</url>
-    <content><![CDATA[<p>波束形成是阵列信号处理算法中最为基础也是应用最为广泛的一种算法，如今依旧是水声方面信号处理的主要组成部分之一。波束形成算法的功能大致可以分为两个方面，一方面是为了获得较为理想的输出信噪比，另一方面是为了获得较高的DOA分辨能力。因此声呐要想具有良好性能，首先就要有一个性能优良的波束形成系统。 </p>
-<p>对于平面波而言，由于其幅度相同，所以到达基阵上的信号可以视为同一信号，但是由于各个阵元空间位置不同，导致对于同一时间接收到的信号，相对于参考阵元，各个阵元会有不同的到达时间延迟。如果采取方法对每个阵元的时延量进行补偿，再将各个阵元上的延迟信号求和，会形成一个标量输出，其目的就是形成这样一个波束，并将其扫描到一个特定的方向上。 </p>
+    <content><![CDATA[<p>波束形成是阵列信号处理算法中最为基础也是应用最为广泛的一种算法，如今依旧是水声方面信号处理的主要组成部分之一。波束形成算法的功能大致可以分为两个方面，一方面是为了获得较为理想的输出信噪比，另一方面是为了获得较高的DOA分辨能力。因此声呐要想具有良好性能，首先就要有一个性能优良的波束形成系统。<br><a id="more"></a><br>对于平面波而言，由于其幅度相同，所以到达基阵上的信号可以视为同一信号，但是由于各个阵元空间位置不同，导致对于同一时间接收到的信号，相对于参考阵元，各个阵元会有不同的到达时间延迟。如果采取方法对每个阵元的时延量进行补偿，再将各个阵元上的延迟信号求和，会形成一个标量输出，其目的就是形成这样一个波束，并将其扫描到一个特定的方向上。 </p>
 <p>对于由$N$个间距为$d$，特性相同的传感器组成的均匀线列阵，如果信号的入射角度和阵列的法线方向的夹角为$\theta$，则每两个相邻的传感器收到的信号时间延迟为 </p>
 <script type="math/tex; mode=display">
 \tau { \rm { = } } \frac { \lambda } { c } d\sin \theta  = \frac { { 2\pi } } { w } d\sin \theta</script><p>式中，$c$为波速，$\lambda$为波长。<br>以第一个阵元为参考阵元，那么为了补偿各阵元时延，以形成一个主瓣，所以常规波束形成器的加权向量可以构造为</p>
@@ -137,5 +121,20 @@ R = E[X { X^H } ]</script><p>实际中接收的信号都是由快拍数构成的
         <tag>阵列信号处理</tag>
         <tag>波束形成</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2018/02/23/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
 </search>
