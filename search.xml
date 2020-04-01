@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>常规波束形成</title>
-    <url>/2020/03/30/%E5%B8%B8%E8%A7%84%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>5G Massive MIMO</title>
     <url>/2020/03/27/5G-Massive-MIMO/</url>
     <content><![CDATA[<p>修改中</p>
@@ -56,13 +51,28 @@
         <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>阵列信号处理</tag>
         <tag>通信</tag>
+        <tag>阵列信号处理</tag>
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/03/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>协方差矩阵重构的零陷展宽算法</title>
-    <url>/2020/03/23/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E9%87%8D%E6%9E%84%E7%9A%84%E9%9B%B6%E9%99%B7%E5%B1%95%E5%AE%BD%E7%AE%97%E6%B3%95/</url>
+    <url>/2018/06/27/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E9%87%8D%E6%9E%84%E7%9A%84%E9%9B%B6%E9%99%B7%E5%B1%95%E5%AE%BD%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h2 id="深度可调节的零陷展宽算法"><a href="#深度可调节的零陷展宽算法" class="headerlink" title="深度可调节的零陷展宽算法"></a>深度可调节的零陷展宽算法</h2><p>在2012年，Y.Gu提出了一种通过利用Capon谱对干扰角度区域阵列流形的协方差矩阵求和，进而获得干扰加噪声协方差矩阵估计的方法。 </p>
 <a id="more"></a>
 <p>其空间谱密度函数为：  </p>
@@ -87,33 +97,45 @@ W(\alpha ) = 0.5 - 0.5\cos [\pi (2\alpha  + \Phi )/\Phi ]\\
 <script type="math/tex; mode=display">
 { R_ { in } }  = \int_\Theta  { P_w^d } (\theta )[a(\theta ) { a^H } (\theta )]d\theta</script><p>式中，$\Theta $为干扰区间，所有干扰需要在干扰区间内，同时干扰区间与期望信号所在区间不可重叠，同时干扰区间与期望信号区间构成整个观测范围。$d(d &gt; 1)$为零陷深度控制系数，由于Capon谱在干扰方向会产生峰值，所以由于$d$的加入，干扰方向产生的峰值也会增大，零陷会变得更深。 </p>
 <h2 id="仿真分析"><a href="#仿真分析" class="headerlink" title="仿真分析"></a>仿真分析</h2><p>仿真采用由16个各向同性的阵元组成的均匀线列阵，以阵列法线方向为${0^ \circ }$，阵元间距为半波长，期望信号的入射角度为${0^ \circ }$，信噪比为$0dB$，干扰分别从${10^ \circ }$和${30^ \circ }$方向入射到阵列，干噪比均为$30dB$，快拍数为50，Hanning窗宽度$\Phi $分别为${4^ \circ }$和${2^ \circ }$，期望信号、干扰以及噪声互相不相关。 </p>
-<p><img src="/images/spectrum_1.png" alt="Capon波束形成空间谱"><img src="/images/spectrum_2.png" alt="Capon波束形成扩展后空间谱"></p>
+<p><img src="/images/spectrum_1.png" alt="Capon波束形成空间谱"><br><img src="/images/spectrum_2.png" alt="Capon波束形成扩展后空间谱"></p>
 <p>从上图中可以看出，Hanning窗对空间谱的谱峰进行扩展，可以使期望方位与干扰方位的谱峰展宽，窗宽度$\Phi $越大，谱峰越宽，即意味着形成的零陷越宽，对运动的强干扰抑制能力更强，但是伴随着$\Phi $的增加，波束形成算法对噪声的抑制能力出现明显下降。 </p>
-<p><img src="/images/nulling_widen_deep.png" alt="(a)不同深度系数零陷对比曲线"><img src="/images/nulling_widen_wide.png" alt="(b)不同深度宽度系数零陷对比曲线"></p>
+<p><img src="/images/nulling_widen_deep.png" alt="(a)不同深度系数零陷对比曲线"><br><img src="/images/nulling_widen_wide.png" alt="(b)不同深度宽度系数零陷对比曲线"></p>
 <p>上图中可以看出，零陷深度系数$d$不同时，零陷的深度会有差异，$d$越大，零陷越深，旁瓣会略有升高，同时在零陷的宽度系数保持不变时，仿真宽度保持不变；由图(b)得知算法可以同时针对宽度与深度参数进行调整，满足预期要求，需要指出，随着窗宽度和深度系数的提高，旁瓣会随之升高。 </p>
 ]]></content>
       <categories>
         <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>零陷</tag>
         <tag>阵列信号处理</tag>
+        <tag>零陷</tag>
         <tag>Capon谱</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/03/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>常规波束形成</title>
+    <url>/2018/03/27/%E5%B8%B8%E8%A7%84%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</url>
+    <content><![CDATA[<p>波束形成是阵列信号处理算法中最为基础也是应用最为广泛的一种算法，如今依旧是水声方面信号处理的主要组成部分之一。波束形成算法的功能大致可以分为两个方面，一方面是为了获得较为理想的输出信噪比，另一方面是为了获得较高的DOA分辨能力。因此声呐要想具有良好性能，首先就要有一个性能优良的波束形成系统。 </p>
+<p>对于平面波而言，由于其幅度相同，所以到达基阵上的信号可以视为同一信号，但是由于各个阵元空间位置不同，导致对于同一时间接收到的信号，相对于参考阵元，各个阵元会有不同的到达时间延迟。如果采取方法对每个阵元的时延量进行补偿，再将各个阵元上的延迟信号求和，会形成一个标量输出，其目的就是形成这样一个波束，并将其扫描到一个特定的方向上。 </p>
+<p>对于由$N$个间距为$d$，特性相同的传感器组成的均匀线列阵，如果信号的入射角度和阵列的法线方向的夹角为$\theta$，则每两个相邻的传感器收到的信号时间延迟为 </p>
+<script type="math/tex; mode=display">
+\tau { \rm { = } } \frac { \lambda } { c } d\sin \theta  = \frac { { 2\pi } } { w } d\sin \theta</script><p>式中，$c$为波速，$\lambda$为波长。<br>以第一个阵元为参考阵元，那么为了补偿各阵元时延，以形成一个主瓣，所以常规波束形成器的加权向量可以构造为</p>
+<script type="math/tex; mode=display">
+w(\theta ) = { [1{\rm { } } { e^ { - jw\tau } } { \rm { } } \cdots { \rm { } } { e^ { - jw(N - 1)\tau } } ] ^T }</script><p>则该算法的波束形成器输出可以表示为 </p>
+<script type="math/tex; mode=display">
+y(t) = { w^H } (\theta )X(t) = \sum\limits_ { i = 1 } ^N { { w_i } { x_i } (t) }</script><script type="math/tex; mode=display">
+R = E[X { X^H } ]</script><p>实际中接收的信号都是由快拍数构成的，且因受到接收时间的限制，实际阵列接收到的数据长度都是有限的，所以无法获取理论分析所得协方差矩阵，因此只能用最大似然估计法对理论上的数值求取估计矩阵，估计矩阵表示如下： </p>
+<script type="math/tex; mode=display">
+\hat R = \frac { 1 } { L } X { X^H }</script><p>如果令加权向量中的观测范围可以变化，则其在形式上等同于扫描向量$a(\theta )$，则其输出功率可以表示为 </p>
+<script type="math/tex; mode=display">
+{ P_ { CBF } } (\theta ) = { w^H } (\theta )\hat Rw(\theta )</script><p>为了验证常规波束形成的方位估计效果，假设由16个各向同性的阵元组成的均匀线列阵，定义阵列的法线方向为${0^ \circ }$，阵元间距为$\lambda /2$，两个等强度的窄带信号入射到该阵列，信号的频率为2000Hz，噪声背景为高斯白噪声，同时信号和噪声不相关，快拍数为1024，改变信号的入射角度和信噪比，仿真结果如下：<br><img src="/images/CBF_1.png" alt="角度(-5,5),sinr=15dB"><br><img src="/images/CBF_2.png" alt="角度(-5,2),sinr=15dB"><br><img src="/images/CBF_3.png" alt="角度(-5,1),sinr=15dB"><br><img src="/images/CBF_4.png" alt="角度(-5,2),sinr=10dB"></p>
+<p>在不同信号参数下，由常规波束形成法得到的空间方位谱分别在图(a)、(b)、(c)、(d)给出。当两个信号的入射角间隔${6^ \circ }$，信噪比为15dB时，如图(c)所示，已经无法正常分辨两个目标，保持信噪比不变，增大信号入射角度间隔至${7^ \circ }$，如图(b)，已经能够分辨两个目标，并且能给出目标正确的入射方向，如将间距增大到${10^ \circ }$，则图(a)，两个信号已经完全分离，在各自来波方向均有明显的峰，在将入射角度间距设置在${7^ \circ }$的情况下，令信噪比SNR下降至10dB，从图(d)中可以看到，由于入射的信号能量较低，输出数据的信噪比明显降低。</p>
 ]]></content>
+      <categories>
+        <category>阵列信号处理</category>
+      </categories>
+      <tags>
+        <tag>阵列信号处理</tag>
+        <tag>波束形成</tag>
+      </tags>
   </entry>
 </search>
