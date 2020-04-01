@@ -91,8 +91,8 @@ W(\alpha ) = 0.5 - 0.5\cos [\pi (2\alpha  + \Phi )/\Phi ]\\
         <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>零陷</tag>
         <tag>阵列信号处理</tag>
+        <tag>零陷</tag>
         <tag>Capon谱</tag>
       </tags>
   </entry>
@@ -116,10 +116,11 @@ R = E[X { X^H } ]</script><p>实际中接收的信号都是由快拍数构成的
 ]]></content>
       <categories>
         <category>阵列信号处理</category>
+        <category>DOA</category>
       </categories>
       <tags>
-        <tag>阵列信号处理</tag>
         <tag>波束形成</tag>
+        <tag>阵列信号处理</tag>
       </tags>
   </entry>
   <entry>
