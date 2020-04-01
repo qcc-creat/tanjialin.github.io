@@ -51,8 +51,8 @@
         <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>通信</tag>
         <tag>阵列信号处理</tag>
+        <tag>通信</tag>
       </tags>
   </entry>
   <entry>
@@ -91,8 +91,8 @@ W(\alpha ) = 0.5 - 0.5\cos [\pi (2\alpha  + \Phi )/\Phi ]\\
         <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>阵列信号处理</tag>
         <tag>零陷</tag>
+        <tag>阵列信号处理</tag>
         <tag>Capon谱</tag>
       </tags>
   </entry>
