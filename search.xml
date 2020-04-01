@@ -87,11 +87,9 @@ W(\alpha ) = 0.5 - 0.5\cos [\pi (2\alpha  + \Phi )/\Phi ]\\
 <script type="math/tex; mode=display">
 { R_ { in } }  = \int_\Theta  { P_w^d } (\theta )[a(\theta ) { a^H } (\theta )]d\theta</script><p>式中，$\Theta $为干扰区间，所有干扰需要在干扰区间内，同时干扰区间与期望信号所在区间不可重叠，同时干扰区间与期望信号区间构成整个观测范围。$d(d &gt; 1)$为零陷深度控制系数，由于Capon谱在干扰方向会产生峰值，所以由于$d$的加入，干扰方向产生的峰值也会增大，零陷会变得更深。 </p>
 <h2 id="仿真分析"><a href="#仿真分析" class="headerlink" title="仿真分析"></a>仿真分析</h2><p>仿真采用由16个各向同性的阵元组成的均匀线列阵，以阵列法线方向为${0^ \circ }$，阵元间距为半波长，期望信号的入射角度为${0^ \circ }$，信噪比为$0dB$，干扰分别从${10^ \circ }$和${30^ \circ }$方向入射到阵列，干噪比均为$30dB$，快拍数为50，Hanning窗宽度$\Phi $分别为${4^ \circ }$和${2^ \circ }$，期望信号、干扰以及噪声互相不相关。 </p>
-<p><img src="/.io//spectrum_1.png" alt="Capon波束形成空间谱"></p>
-<p><img src="/.io//spectrum_2.png" alt="Capon波束形成扩展后空间谱"></p>
+<p><img src="/images/spectrum_1.png" alt="Capon波束形成空间谱"><img src="/images/spectrum_2.png" alt="Capon波束形成扩展后空间谱"></p>
 <p>从上图中可以看出，Hanning窗对空间谱的谱峰进行扩展，可以使期望方位与干扰方位的谱峰展宽，窗宽度$\Phi $越大，谱峰越宽，即意味着形成的零陷越宽，对运动的强干扰抑制能力更强，但是伴随着$\Phi $的增加，波束形成算法对噪声的抑制能力出现明显下降。 </p>
-<p><img src="/.io//nulling_widen_deep.png" alt="(a)不同深度系数零陷对比曲线"></p>
-<p><img src="/.io//nulling_widen_wide.png" alt="(b)不同深度宽度系数零陷对比曲线"></p>
+<p><img src="/images/nulling_widen_deep.png" alt="(a)不同深度系数零陷对比曲线"><img src="/images/nulling_widen_wide.png" alt="(b)不同深度宽度系数零陷对比曲线"></p>
 <p>上图中可以看出，零陷深度系数$d$不同时，零陷的深度会有差异，$d$越大，零陷越深，旁瓣会略有升高，同时在零陷的宽度系数保持不变时，仿真宽度保持不变；由图(b)得知算法可以同时针对宽度与深度参数进行调整，满足预期要求，需要指出，随着窗宽度和深度系数的提高，旁瓣会随之升高。 </p>
 ]]></content>
       <categories>
