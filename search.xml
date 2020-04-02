@@ -51,8 +51,8 @@
         <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>阵列信号处理</tag>
         <tag>通信</tag>
+        <tag>阵列信号处理</tag>
       </tags>
   </entry>
   <entry>
@@ -119,8 +119,8 @@ R = E[X { X^H } ]</script><p>实际中接收的信号都是由快拍数构成的
         <category>DOA</category>
       </categories>
       <tags>
-        <tag>波束形成</tag>
         <tag>阵列信号处理</tag>
+        <tag>波束形成</tag>
       </tags>
   </entry>
   <entry>
