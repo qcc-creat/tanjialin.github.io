@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>矩阵奇异值分解</title>
+    <url>/2020/04/03/%E7%9F%A9%E9%98%B5%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/</url>
+    <content><![CDATA[<p>矩阵的奇异值分解（singular value decomposition，简称SVD）是线性代数中很重要的内容，并且奇异值分解过程也是线性代数中相似对角化分解（也被称为特征值分解，eigenvalue decomposition，简称EVD）的延伸。因此，以下将从线性代数中最基础的矩阵分解开始讲起，引出奇异值分解的定义，并最终给出奇异值分解的低秩逼近问题相关的证明过程。 </p>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>空域矩阵预滤波DOA估计</title>
+    <url>/2020/04/02/%E7%A9%BA%E5%9F%9F%E7%9F%A9%E9%98%B5%E9%A2%84%E6%BB%A4%E6%B3%A2DOA%E4%BC%B0%E8%AE%A1/</url>
+    <content><![CDATA[<p>实际阵列在接收信号的同时，由于复杂的海洋环境影响，往往会伴有很多干扰信号，但是只有一部分方位是人们感兴趣的，所以对其他方位的噪声以及干扰进行抑制是非常有必要的，由此需要一个空域滤波器，能够做到只让来自感兴趣方向的信号通过，并且抑制来自其余不感兴趣方向的信号。矩阵空域滤波器以及波束域滤波器是空域滤波器中最为主要的两大分支。其中矩阵空域滤波器是比波束域滤波器更为合适作为预滤波器的一种空域滤波器，该滤波器不仅有着空域滤波器的基本特性，最为重要的一个特性就是，该滤波器处理完阵列信号后输出的数据不同于波束域滤波器输出的波束域信号，其输出仍为阵列信号。因此可以改良阵列数据，进而达到预处理的目的以及达到提高目标方位估计分辨率以及目标检测的能力。<br><a id="more"></a></p>
+<h1 id="空域矩阵滤波器原理"><a href="#空域矩阵滤波器原理" class="headerlink" title="空域矩阵滤波器原理"></a>空域矩阵滤波器原理</h1>]]></content>
+      <tags>
+        <tag>阵列信号处理</tag>
+        <tag>凸优化</tag>
+        <tag>滤波器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二阶锥规划</title>
+    <url>/2020/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<p>二阶锥规划(Second Order Cone Programming，SOCP)是凸优化问题的一个子集，通过引入二阶锥规划方法，可以解决大量优化设计问题，同时应用此方法，能解决方位估计算法包括旁瓣级、主瓣宽度、阵增益、稳健性在内的很多性能指标无法兼顾的问题，本部分介绍二阶锥规划优化设计方法，用于基于不同设计准则的空域矩阵滤波器求最优解。<br><a id="more"></a><br>对于一个向量空间$V$与它的一个子集 ，如果子集$C$中的任意一点$x$与任意整数$a$，其乘积$ax$仍然属于子集$C$，则称$C$为一个锥。若一个锥$C$中任意两点$x$与$y$，以及任意两个正数$a$与$b$，都有$ax + by$属于$C$，则该锥为凸锥。</p>
+<p>二阶锥规划是凸优化问题的一个子问题，它是在二阶锥约束和线性等式约束的条件下，最小化某线性目标函数，这是一种非常高效的求解算法，目的就是在满足约束条件的锥内寻找能够使目标函数最小化的最优点。其中二阶是指锥里面用到的是二范数，下式是一个二阶锥的表达式：<br><img src="/images/Snipaste_second_order.png" alt="img"> </p>
+<p>其中$b \in {C^{a \times 1}}$，$y \in {C^{a \times 1}}$，${A_i} \in {C^{({a_i} - 1) \times a}}$，${b_i} \in {C^{({a_i} - 1) \times 1}}$，${c_i} \in {C^{a \times 1}}$，$c_i^Ty \in R$，${d_i} \in R$，$F \in {C^{g \times a}}$，$g \in {C^{g \times 1}}$，每个不等式约束可以表示为如下二阶锥： </p>
+<p><img src="/images/Snipaste_second_1.png" alt="img"></p>
+<p>其中$SOC_i^ { { a_i } }$是空间${ C^ { { a_i } } }$的二阶锥，定义为</p>
+<p><img src="/images/Snipaste_second_2.png" alt="img"></p>
+<p>式中等式约束可以表示为 </p>
+<script type="math/tex; mode=display">
+g - Fy \in  { \{ 0\} ^g }</script><p>其中零锥${\{ 0\} ^g}$，定义为：</p>
+<p><img src="/images/Snipaste_second_3.png" alt="img"> </p>
+<p>线性规划和凸二次规划都属于二阶锥规划，同时，由于二阶锥规划约束可以表示为线性矩阵不等式，所以它也是半定规划的子集。 </p>
+<p><img src="/images/Snipaste_second_4.png" alt="img"> </p>
+<p>其中$I$表示单位矩阵<br>可以通过内点法求解二阶锥规划问题，例如SeDuMi，相比于半正定规划求解，通过这种方法求解此类优化问题速度更快。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>凸优化</tag>
+        <tag>二阶锥</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5G Massive MIMO</title>
     <url>/2020/03/27/5G-Massive-MIMO/</url>
     <content><![CDATA[<p>修改中</p>
@@ -53,6 +100,36 @@
       <tags>
         <tag>通信</tag>
         <tag>阵列信号处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>稳健矢量最优化自适应波束形成</title>
+    <url>/2019/05/02/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</url>
+    <content><![CDATA[<p>在提高算法稳健性时，会用到不同的准则作为优化准则，将这些算法统一到一个框架下，本文构造了矢量最优化稳健波束形成方法，并通过二阶锥规划理论方法进行求解，分析各个参数对最优权矢量的影响，并推导自适应权矢量的近似表达式。</p>
+<a id="more"></a>]]></content>
+      <categories>
+        <category>自适应波束形成</category>
+      </categories>
+      <tags>
+        <tag>稳健</tag>
+        <tag>权矢量</tag>
+        <tag>最优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多重信号子空间分类算法</title>
+    <url>/2019/03/02/%E5%A4%9A%E9%87%8D%E4%BF%A1%E5%8F%B7%E5%AD%90%E7%A9%BA%E9%97%B4%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>多重信号特征法通常又被称为多重信号子空间分类算法，这种信号子空间方法具有多信号同时测向能力，并且其方位分辨率较高，它的主要思想是：将阵列输出数据进行自相关处理后获得的协方差矩阵进行特征分解，得到信号子空间和噪声子空间，然后利用这两个子空间的正交性来构造MUSIC方位谱，此时方位谱的谱峰就是需要估计的信号方位。 </p>
+<a id="more"></a>
+<p>假设信号与噪声之间不具有相关性，同时各个阵元之间的噪声互相不相关，则根据窄带信号模型，其协方差矩阵为： </p>
+<script type="math/tex; mode=display">
+R = E[X { X^H } ] = AE[S { S^H } ] { A^H }  + E[N { N^H } ] = A { R_s } { A^H } + { \sigma ^2 } I</script><p>其中，符号H表示矩阵的共轭转置。$S$表示目标信号，对$R$进行特征分解，则信号协方差矩阵可以由特征值和对应的特征向量表示为如下形式：</p>
+<script type="math/tex; mode=display">
+R { \rm { = } } \sum\limits_ { i = 1 } ^M { { \lambda _i } }  { e_i } e_i^H</script>]]></content>
+      <tags>
+        <tag>阵列信号处理</tag>
+        <tag>DOA</tag>
+        <tag>Matlab仿真</tag>
       </tags>
   </entry>
   <entry>

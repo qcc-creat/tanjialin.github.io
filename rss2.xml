@@ -9,8 +9,59 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一切都是瞬间，一切都会过去</description>
-    <pubDate>Tue, 31 Mar 2020 17:08:31 GMT</pubDate>
+    <pubDate>Thu, 02 Apr 2020 17:10:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>矩阵奇异值分解</title>
+      <link>http://tanjialin.github.io/2020/04/03/%E7%9F%A9%E9%98%B5%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/</link>
+      <guid>http://tanjialin.github.io/2020/04/03/%E7%9F%A9%E9%98%B5%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/</guid>
+      <pubDate>Thu, 02 Apr 2020 17:07:24 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;矩阵的奇异值分解（singular value decomposition，简称SVD）是线性代数中很重要的内容，并且奇异值分解过程也是线性代数中相似对角化分解（也被称为特征值分解，eigenvalue decomposition，简称EVD）的延伸。因此，以下将从线性代数中最基础的矩阵分解开始讲起，引出奇异值分解的定义，并最终给出奇异值分解的低秩逼近问题相关的证明过程。 &lt;/p&gt;
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<p>矩阵的奇异值分解（singular value decomposition，简称SVD）是线性代数中很重要的内容，并且奇异值分解过程也是线性代数中相似对角化分解（也被称为特征值分解，eigenvalue decomposition，简称EVD）的延伸。因此，以下将从线性代数中最基础的矩阵分解开始讲起，引出奇异值分解的定义，并最终给出奇异值分解的低秩逼近问题相关的证明过程。 </p><a id="more"></a>]]></content:encoded>
+      
+      <comments>http://tanjialin.github.io/2020/04/03/%E7%9F%A9%E9%98%B5%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>空域矩阵预滤波DOA估计</title>
+      <link>http://tanjialin.github.io/2020/04/02/%E7%A9%BA%E5%9F%9F%E7%9F%A9%E9%98%B5%E9%A2%84%E6%BB%A4%E6%B3%A2DOA%E4%BC%B0%E8%AE%A1/</link>
+      <guid>http://tanjialin.github.io/2020/04/02/%E7%A9%BA%E5%9F%9F%E7%9F%A9%E9%98%B5%E9%A2%84%E6%BB%A4%E6%B3%A2DOA%E4%BC%B0%E8%AE%A1/</guid>
+      <pubDate>Thu, 02 Apr 2020 15:59:29 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;实际阵列在接收信号的同时，由于复杂的海洋环境影响，往往会伴有很多干扰信号，但是只有一部分方位是人们感兴趣的，所以对其他方位的噪声以及干扰进行抑制是非常有必要的，由此需要一个空域滤波器，能够做到只让来自感兴趣方向的信号通过，并且抑制来自其余不感兴趣方向的信号。矩阵空域滤波器以及波束域滤波器是空域滤波器中最为主要的两大分支。其中矩阵空域滤波器是比波束域滤波器更为合适作为预滤波器的一种空域滤波器，该滤波器不仅有着空域滤波器的基本特性，最为重要的一个特性就是，该滤波器处理完阵列信号后输出的数据不同于波束域滤波器输出的波束域信号，其输出仍为阵列信号。因此可以改良阵列数据，进而达到预处理的目的以及达到提高目标方位估计分辨率以及目标检测的能力。&lt;br&gt;&lt;/p&gt;
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<p>实际阵列在接收信号的同时，由于复杂的海洋环境影响，往往会伴有很多干扰信号，但是只有一部分方位是人们感兴趣的，所以对其他方位的噪声以及干扰进行抑制是非常有必要的，由此需要一个空域滤波器，能够做到只让来自感兴趣方向的信号通过，并且抑制来自其余不感兴趣方向的信号。矩阵空域滤波器以及波束域滤波器是空域滤波器中最为主要的两大分支。其中矩阵空域滤波器是比波束域滤波器更为合适作为预滤波器的一种空域滤波器，该滤波器不仅有着空域滤波器的基本特性，最为重要的一个特性就是，该滤波器处理完阵列信号后输出的数据不同于波束域滤波器输出的波束域信号，其输出仍为阵列信号。因此可以改良阵列数据，进而达到预处理的目的以及达到提高目标方位估计分辨率以及目标检测的能力。<br><a id="more"></a></p><h1 id="空域矩阵滤波器原理"><a href="#空域矩阵滤波器原理" class="headerlink" title="空域矩阵滤波器原理"></a>空域矩阵滤波器原理</h1>]]></content:encoded>
+      
+      <comments>http://tanjialin.github.io/2020/04/02/%E7%A9%BA%E5%9F%9F%E7%9F%A9%E9%98%B5%E9%A2%84%E6%BB%A4%E6%B3%A2DOA%E4%BC%B0%E8%AE%A1/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>二阶锥规划</title>
+      <link>http://tanjialin.github.io/2020/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/</link>
+      <guid>http://tanjialin.github.io/2020/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/</guid>
+      <pubDate>Thu, 02 Apr 2020 15:58:19 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;二阶锥规划(Second Order Cone Programming，SOCP)是凸优化问题的一个子集，通过引入二阶锥规划方法，可以解决大量优化设计问题，同时应用此方法，能解决方位估计算法包括旁瓣级、主瓣宽度、阵增益、稳健性在内的很多性能指标无法兼顾的问题，本部分介绍二阶锥规划优化设计方法，用于基于不同设计准则的空域矩阵滤波器求最优解。&lt;br&gt;&lt;/p&gt;
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<p>二阶锥规划(Second Order Cone Programming，SOCP)是凸优化问题的一个子集，通过引入二阶锥规划方法，可以解决大量优化设计问题，同时应用此方法，能解决方位估计算法包括旁瓣级、主瓣宽度、阵增益、稳健性在内的很多性能指标无法兼顾的问题，本部分介绍二阶锥规划优化设计方法，用于基于不同设计准则的空域矩阵滤波器求最优解。<br><a id="more"></a><br>对于一个向量空间$V$与它的一个子集 ，如果子集$C$中的任意一点$x$与任意整数$a$，其乘积$ax$仍然属于子集$C$，则称$C$为一个锥。若一个锥$C$中任意两点$x$与$y$，以及任意两个正数$a$与$b$，都有$ax + by$属于$C$，则该锥为凸锥。</p><p>二阶锥规划是凸优化问题的一个子问题，它是在二阶锥约束和线性等式约束的条件下，最小化某线性目标函数，这是一种非常高效的求解算法，目的就是在满足约束条件的锥内寻找能够使目标函数最小化的最优点。其中二阶是指锥里面用到的是二范数，下式是一个二阶锥的表达式：<br><img src="/images/Snipaste_second_order.png" alt="img"> </p><p>其中$b \in {C^{a \times 1}}$，$y \in {C^{a \times 1}}$，${A_i} \in {C^{({a_i} - 1) \times a}}$，${b_i} \in {C^{({a_i} - 1) \times 1}}$，${c_i} \in {C^{a \times 1}}$，$c_i^Ty \in R$，${d_i} \in R$，$F \in {C^{g \times a}}$，$g \in {C^{g \times 1}}$，每个不等式约束可以表示为如下二阶锥： </p><p><img src="/images/Snipaste_second_1.png" alt="img"></p><p>其中$SOC_i^ { { a_i } }$是空间${ C^ { { a_i } } }$的二阶锥，定义为</p><p><img src="/images/Snipaste_second_2.png" alt="img"></p><p>式中等式约束可以表示为 </p><script type="math/tex; mode=display">g - Fy \in  { \{ 0\} ^g }</script><p>其中零锥${\{ 0\} ^g}$，定义为：</p><p><img src="/images/Snipaste_second_3.png" alt="img"> </p><p>线性规划和凸二次规划都属于二阶锥规划，同时，由于二阶锥规划约束可以表示为线性矩阵不等式，所以它也是半定规划的子集。 </p><p><img src="/images/Snipaste_second_4.png" alt="img"> </p><p>其中$I$表示单位矩阵<br>可以通过内点法求解二阶锥规划问题，例如SeDuMi，相比于半正定规划求解，通过这种方法求解此类优化问题速度更快。</p>]]></content:encoded>
+      
+      <comments>http://tanjialin.github.io/2020/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>5G Massive MIMO</title>
@@ -28,6 +79,40 @@
       <content:encoded><![CDATA[<p>修改中</p><p>Massive MIMO（大规模天线技术，亦称为Large Scale MIMO）是第五代移动通信（5G）中提高系统容量和频谱利用率的关键技术。此技术中，基站利用同一个时频域资源同时为多个终端进行服务，从而增强了基站同时接收和发送多路不同信号的能力，可以有效的提升频谱利用率、数据传输的稳定性和可靠性。 </p><a id="more"></a><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>原创文章，水平有限，如发现有错误，恳请及时联系作者修改，欢迎大家一起学习。 </p><p>本节作为引言，不讨论技术，只讨论当下实际中存在的一些问题，接下来会逐步更新Massive MIMO的部分关键技术。 </p><p>在LTE网络中，随着人们上网方式的改变，数据业务在近些年一直保持着爆炸性的增长，现有网络经常会出现支持不流畅的现象，但是在这样的情况下，仍然存在以下几个亟待解决的问题： </p><h3 id="移动视频的需求仍然在逐年增加"><a href="#移动视频的需求仍然在逐年增加" class="headerlink" title="移动视频的需求仍然在逐年增加"></a>移动视频的需求仍然在逐年增加</h3><p>这个问题是对峰值流量的一种挑战，可以考虑的方法包括：<strong>增大带宽</strong>；<strong>增加基站的密度</strong>；<strong>提高发射功率</strong>，这是比较不现实的，终端如果增加发射功率会导致电池电量的大量消耗，基站也存在同样问题，同时基站发射功率如果过大，会对邻区造成干扰；<strong>高Rank空分技术</strong>，现有的空分技术，波束之间的干扰比较大，导致不同终端的影响较大，从而降低了空分效率，如果引入高Rank空分技术，相互之间的干扰变小，类似很多辆车，并排行驶在泥泞的路上，尽管如果能安全通过，确实会比先后通过流量更高，但是效果并不明显，小心翼翼且易出事故，如果形成很多条互不干扰的路，就像立交桥一样，各自行驶，干扰极小，那么就极大的提升峰值流量。</p><h3 id="小区边缘用户体验差"><a href="#小区边缘用户体验差" class="headerlink" title="小区边缘用户体验差"></a>小区边缘用户体验差</h3><p>传统的4G宏站，从小区中心到小区边缘，业务速率会大幅度下滑，解决办法可以考虑如下：<strong>提高发射功率</strong>；<strong>新增站点补盲</strong>，这有悖于蜂窝网络的初衷，会大幅的提升组网费用；<strong>小区间干扰协调</strong>;<strong>波束赋形</strong>，传统的宽波束能量比较分散，作用距离相对较短，该方法可以通过使波束变窄，集中能量，则基站覆盖面积增大，如果能做到这一点，边缘用户的接收sinr会更高，体验也会得到明显提升，这种现象也可以类比相同功率的白炽灯、手电筒和激光笔，光束越窄，作用范围越大。</p><h3 id="垂直覆盖面临困难"><a href="#垂直覆盖面临困难" class="headerlink" title="垂直覆盖面临困难"></a>垂直覆盖面临困难</h3><p>传统4G宏站由于天线垂直波束过窄，架设天线时应着重考虑大多数的地面用户，天线高度不宜过高，所以无法为高层楼提供垂直的覆盖，造成高层楼信号较差。解决办法：<strong>提高基站架设高度</strong>;<strong>多组天线，分别覆盖</strong>;<strong>3D波束赋形</strong>，Massive MIMO 可在水平和垂直两个维度动态调整信号方向，使信号能量更集中、方向更精准，降低小区间的干扰，从而支持更多的用户在相同的时频资源上并行传输(空分复用)，从而达到提升小区吞吐量和边缘用户速率的效果。天线增益的提升，穿墙能力得到提升，实现了广度和深度的要求进行了有效的宽松。</p><p>此时，我们需要考虑，怎样才能有效提高信号的强度呢？提高信号强度，即提高接收到得信号功率，终端接收到的信号的信号功率大小表达式如下:</p><script type="math/tex; mode=display">{ P_ { rx } }  = \frac { { { P_ { tx } } } } { { 4\pi  { R^2 } } } \frac { { { \lambda ^2 } } } { { 4\pi } } { G_ { rx } } { G_ { tx } }</script><p>其中不能无限的增大发射功率${P_{tx}}$，不能缩短基站和手机之间的距离$R$，低频段资源又十分有限，很难将频带降低$\lambda$，所以无法增大波长，此时只能通过提升天线的数量，把两个天线增益参数${G_{rx}}$和${G_{tx}}$再次提升，进而提高接收功率。</p><p>5G采用了高频段，虽然高频信号的传播损耗非常大，但是由于高频段波长短，因此可以在有效的面积内部署更多的天线阵子，通过大规模天线阵列形成具有非常高增益的窄波束来抵消传播损失。这个特点对手机尤为重要，为其实现Massive MIMO奠定了一个非常好的基础。</p><p>Massive MIMO主要存在以下几点优势： </p><ul><li>天线波束变窄<br>传统的8天线，可以实现波束赋形，把不同用户放在不同的波束中，干扰较小；如果采用Massive MIMO,波束主瓣更窄，数量更多，相互之间干扰变小。</li><li><p>空分隔离更易</p></li><li><p>复用流数增多<br>流数越多，速率越高</p></li><li>小区容量提升<h2 id="关键技术"><a href="#关键技术" class="headerlink" title="关键技术"></a>关键技术</h2></li></ul><h3 id="波束赋形"><a href="#波束赋形" class="headerlink" title="波束赋形"></a>波束赋形</h3><p>波束赋形是指根据特定场景自适应的调整天线阵列的幅度图。此过程中，天线阵列会形成一个指向用户的波束，基站根据终端上行的信号来判断来波方向，进而改变下行波束的赋形权值，使波束跟随用户移动。而Massive MIMO是通过引入大量的天线，使天线阵列同一时间和频率资源满足空间上分离的多位用户的需求。</p><ul><li>提升小区边缘用户的接收信号质量</li></ul><ul><li>降低邻区的干扰<br>三维立体信号可以灵活的跟踪终端，而排除传统MIMO宽波束在跟踪终端的同时，由于宽波束对邻区产生干扰</li></ul><h3 id="高Rank空分技术"><a href="#高Rank空分技术" class="headerlink" title="高Rank空分技术"></a>高Rank空分技术</h3><ul><li><p>提升单用户峰值速率 </p></li><li><p>提升小区空分用户数量<br>相比传统LTE系统，支持更高阶的MU-MIMO，支持远超过8个用户同时传输数据</p></li><li>提升小区频谱效率<br>超过100根天线，相比传统8天线获得更高的空分复用增益，极大提高频谱利用效率</li><li>提升小区峰值速率 </li></ul><h3 id="3D波束赋形"><a href="#3D波束赋形" class="headerlink" title="3D波束赋形"></a>3D波束赋形</h3><p><strong>避免“灯下黑”问题</strong>： 在理论上，4G宏站正下方的辐射存在“灯下黑”现象，辐射水平应该是最低的，这是因为天线存在指向性，传播信号基本是以一定的下倾角水平方向发射，而不是垂直方向，所以基站之下的建筑恰好处于盲区，基站辐射最小，其接收的信号一般为远处基站的信号。其中，下倾角越大，覆盖越小，反之覆盖面积就越大。基站辐射强度即基站信号强度，基站信号强度与手机的辐射强度密切相关，离基站越远，基站信号强度越弱，手机发射的功率会越大。</p><p>达成上述三项的关键在于预编码技术，后续将从技术角度分别介绍数字预编码技术和模拟预编码技术。</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>暂无</p>]]></content:encoded>
       
       <comments>http://tanjialin.github.io/2020/03/27/5G-Massive-MIMO/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>稳健矢量最优化自适应波束形成</title>
+      <link>http://tanjialin.github.io/2019/05/02/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</link>
+      <guid>http://tanjialin.github.io/2019/05/02/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</guid>
+      <pubDate>Thu, 02 May 2019 11:56:34 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;在提高算法稳健性时，会用到不同的准则作为优化准则，将这些算法统一到一个框架下，本文构造了矢量最优化稳健波束形成方法，并通过二阶锥规划理论方法进行求解，分析各个参数对最优权矢量的影响，并推导自适应权矢量的近似表达式。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<p>在提高算法稳健性时，会用到不同的准则作为优化准则，将这些算法统一到一个框架下，本文构造了矢量最优化稳健波束形成方法，并通过二阶锥规划理论方法进行求解，分析各个参数对最优权矢量的影响，并推导自适应权矢量的近似表达式。</p><a id="more"></a>]]></content:encoded>
+      
+      <comments>http://tanjialin.github.io/2019/05/02/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>多重信号子空间分类算法</title>
+      <link>http://tanjialin.github.io/2019/03/02/%E5%A4%9A%E9%87%8D%E4%BF%A1%E5%8F%B7%E5%AD%90%E7%A9%BA%E9%97%B4%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/</link>
+      <guid>http://tanjialin.github.io/2019/03/02/%E5%A4%9A%E9%87%8D%E4%BF%A1%E5%8F%B7%E5%AD%90%E7%A9%BA%E9%97%B4%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/</guid>
+      <pubDate>Sat, 02 Mar 2019 15:57:20 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;多重信号特征法通常又被称为多重信号子空间分类算法，这种信号子空间方法具有多信号同时测向能力，并且其方位分辨率较高，它的主要思想是：将阵列输出数据进行自相关处理后获得的协方差矩阵进行特征分解，得到信号子空间和噪声子空间，然后利用这两个子空间的正交性来构造MUSIC方位谱，此时方位谱的谱峰就是需要估计的信号方位。 &lt;/p&gt;
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<p>多重信号特征法通常又被称为多重信号子空间分类算法，这种信号子空间方法具有多信号同时测向能力，并且其方位分辨率较高，它的主要思想是：将阵列输出数据进行自相关处理后获得的协方差矩阵进行特征分解，得到信号子空间和噪声子空间，然后利用这两个子空间的正交性来构造MUSIC方位谱，此时方位谱的谱峰就是需要估计的信号方位。 </p><a id="more"></a><p>假设信号与噪声之间不具有相关性，同时各个阵元之间的噪声互相不相关，则根据窄带信号模型，其协方差矩阵为： </p><script type="math/tex; mode=display">R = E[X { X^H } ] = AE[S { S^H } ] { A^H }  + E[N { N^H } ] = A { R_s } { A^H } + { \sigma ^2 } I</script><p>其中，符号H表示矩阵的共轭转置。$S$表示目标信号，对$R$进行特征分解，则信号协方差矩阵可以由特征值和对应的特征向量表示为如下形式：</p><script type="math/tex; mode=display">R { \rm { = } } \sum\limits_ { i = 1 } ^M { { \lambda _i } }  { e_i } e_i^H</script>]]></content:encoded>
+      
+      <comments>http://tanjialin.github.io/2019/03/02/%E5%A4%9A%E9%87%8D%E4%BF%A1%E5%8F%B7%E5%AD%90%E7%A9%BA%E9%97%B4%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/#disqus_thread</comments>
     </item>
     
     <item>
