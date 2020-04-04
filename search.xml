@@ -135,9 +135,9 @@ R { \rm { = } } \sum\limits_ { i = 1 } ^M { { \lambda _i } }  { e_i } e_i^H</scr
   <entry>
     <title>协方差矩阵重构的零陷展宽算法</title>
     <url>/2018/06/27/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%E9%87%8D%E6%9E%84%E7%9A%84%E9%9B%B6%E9%99%B7%E5%B1%95%E5%AE%BD%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="深度可调节的零陷展宽算法"><a href="#深度可调节的零陷展宽算法" class="headerlink" title="深度可调节的零陷展宽算法"></a>深度可调节的零陷展宽算法</h2><p>在2012年，Y.Gu提出了一种通过利用Capon谱对干扰角度区域阵列流形的协方差矩阵求和，进而获得干扰加噪声协方差矩阵估计的方法。 </p>
+    <content><![CDATA[<p>在2012年，Y.Gu提出了一种通过利用Capon谱对干扰角度区域阵列流形的协方差矩阵求和，进而获得干扰加噪声协方差矩阵估计的方法。 本文在其基础上对算法进行改进，使陷波的深度与宽度可控。</p>
 <a id="more"></a>
-<p>其空间谱密度函数为：  </p>
+<h2 id="深度可调节的零陷展宽算法"><a href="#深度可调节的零陷展宽算法" class="headerlink" title="深度可调节的零陷展宽算法"></a>深度可调节的零陷展宽算法</h2><p>Capon法空间谱密度函数为：  </p>
 <script type="math/tex; mode=display">
 P(\theta ) = \frac{ 1 } { { { a^H } (\theta )R_x^ {  - 1 } a(\theta ) } }</script><p>通过对Capon谱在干扰扇面阵列流形的协方差矩阵求和，获取其干扰加噪声协方差矩阵，</p>
 <script type="math/tex; mode=display">
