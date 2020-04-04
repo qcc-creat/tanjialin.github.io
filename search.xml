@@ -10,7 +10,7 @@
         <category>数学</category>
       </categories>
       <tags>
-        <tag>数学</tag>
+        <tag>矩阵分解</tag>
       </tags>
   </entry>
   <entry>
@@ -61,6 +61,9 @@ a(\theta), & \theta \in \Theta_{P} \\
 
 <p>从图(a)、(b)中可以看出，当信噪比比较低时，预滤波MUSIC算法的估计偏差以及标准差明显低于MUSIC算法，随着信噪比的提高，差别越来越小。<br>由以上的仿真分析，该矩阵滤波器对阻带扇面内的噪声和干扰具有明显的抑制作用，提高了滤波器通带扇面内信号的方位分辨率，并且可以降低基于空域矩阵滤波方位估计时所使用算法的信噪比门限。</p>
 ]]></content>
+      <categories>
+        <category>阵列信号处理</category>
+      </categories>
       <tags>
         <tag>阵列信号处理</tag>
         <tag>凸优化</tag>
@@ -86,8 +89,10 @@ g - Fy \in  { \{ 0\} ^g }</script><p>其中零锥${\{ 0\} ^g}$，定义为：</p
 <p><img src="/images/Snipaste_second_4.png" alt="img"> </p>
 <p>其中$I$表示单位矩阵<br>可以通过内点法求解二阶锥规划问题，例如SeDuMi，相比于半正定规划求解，通过这种方法求解此类优化问题速度更快。</p>
 ]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
       <tags>
-        <tag>数学</tag>
         <tag>凸优化</tag>
         <tag>二阶锥</tag>
       </tags>
@@ -137,13 +142,11 @@ g - Fy \in  { \{ 0\} ^g }</script><p>其中零锥${\{ 0\} ^g}$，定义为：</p
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>暂无</p>
 ]]></content>
       <categories>
-        <category>5G</category>
-        <category>Massive MIMO</category>
         <category>通信</category>
-        <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>通信</tag>
+        <tag>5G</tag>
+        <tag>Massive MIMO</tag>
         <tag>阵列信号处理</tag>
       </tags>
   </entry>
@@ -153,12 +156,13 @@ g - Fy \in  { \{ 0\} ^g }</script><p>其中零锥${\{ 0\} ^g}$，定义为：</p
     <content><![CDATA[<p>在提高算法稳健性时，会用到不同的准则作为优化准则，将这些算法统一到一个框架下，本文构造了矢量最优化稳健波束形成方法，并通过二阶锥规划理论方法进行求解，分析各个参数对最优权矢量的影响，并推导自适应权矢量的近似表达式。</p>
 <a id="more"></a>]]></content>
       <categories>
-        <category>自适应波束形成</category>
+        <category>数字信号处理</category>
       </categories>
       <tags>
         <tag>稳健</tag>
         <tag>权矢量</tag>
         <tag>最优化</tag>
+        <tag>自适应</tag>
       </tags>
   </entry>
   <entry>
@@ -171,8 +175,10 @@ g - Fy \in  { \{ 0\} ^g }</script><p>其中零锥${\{ 0\} ^g}$，定义为：</p
 R = E[X { X^H } ] = AE[S { S^H } ] { A^H }  + E[N { N^H } ] = A { R_s } { A^H } + { \sigma ^2 } I</script><p>其中，符号H表示矩阵的共轭转置。$S$表示目标信号，对$R$进行特征分解，则信号协方差矩阵可以由特征值和对应的特征向量表示为如下形式：</p>
 <script type="math/tex; mode=display">
 R { \rm { = } } \sum\limits_ { i = 1 } ^M { { \lambda _i } }  { e_i } e_i^H</script>]]></content>
+      <categories>
+        <category>阵列信号处理</category>
+      </categories>
       <tags>
-        <tag>阵列信号处理</tag>
         <tag>DOA</tag>
         <tag>Matlab仿真</tag>
       </tags>
@@ -223,9 +229,10 @@ W(\alpha ) = 0.5 - 0.5\cos [\pi (2\alpha  + \Phi )/\Phi ]\\
         <category>阵列信号处理</category>
       </categories>
       <tags>
-        <tag>阵列信号处理</tag>
         <tag>零陷</tag>
         <tag>Capon谱</tag>
+        <tag>深度</tag>
+        <tag>宽度</tag>
       </tags>
   </entry>
   <entry>
@@ -259,10 +266,9 @@ R = E[X { X^H } ]</script><p>实际中接收的信号都是由快拍数构成的
 ]]></content>
       <categories>
         <category>阵列信号处理</category>
-        <category>DOA</category>
       </categories>
       <tags>
-        <tag>阵列信号处理</tag>
+        <tag>DOA</tag>
         <tag>波束形成</tag>
       </tags>
   </entry>
