@@ -17,14 +17,14 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"tanjialin.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.tanjialin.cn","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
   <meta name="description" content="在提高算法稳健性时，会用到不同的准则作为优化准则，将这些算法统一到一个框架下，本文构造了矢量最优化稳健波束形成方法，并通过二阶锥规划理论方法进行求解，分析各个参数对最优权矢量的影响，并推导自适应权矢量的近似表达式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="稳健矢量最优化自适应波束形成">
-<meta property="og:url" content="http://tanjialin.github.io/2019/11/17/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/index.html">
+<meta property="og:url" content="https://www.tanjialin.cn/2019/11/17/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/index.html">
 <meta property="og:site_name" content="明月入怀">
 <meta property="og:description" content="在提高算法稳健性时，会用到不同的准则作为优化准则，将这些算法统一到一个框架下，本文构造了矢量最优化稳健波束形成方法，并通过二阶锥规划理论方法进行求解，分析各个参数对最优权矢量的影响，并推导自适应权矢量的近似表达式。">
 <meta property="og:locale" content="zh_CN">
@@ -37,7 +37,7 @@
 <meta property="article:tag" content="自适应">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://tanjialin.github.io/2019/11/17/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/">
+<link rel="canonical" href="https://www.tanjialin.cn/2019/11/17/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/">
 
 
 <script id="page-configurations">
@@ -206,7 +206,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://tanjialin.github.io/2019/11/17/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/">
+    <link itemprop="mainEntityOfPage" href="https://www.tanjialin.cn/2019/11/17/%E7%A8%B3%E5%81%A5%E7%9F%A2%E9%87%8F%E6%9C%80%E4%BC%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">

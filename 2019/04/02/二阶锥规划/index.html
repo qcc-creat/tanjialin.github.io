@@ -17,32 +17,32 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"tanjialin.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.tanjialin.cn","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
   <meta name="description" content="二阶锥规划(Second Order Cone Programming，SOCP)是凸优化问题的一个子集，通过引入二阶锥规划方法，可以解决大量优化设计问题，同时应用此方法，能解决方位估计算法包括旁瓣级、主瓣宽度、阵增益、稳健性在内的很多性能指标无法兼顾的问题，本部分介绍二阶锥规划优化设计方法，用于基于不同设计准则的空域矩阵滤波器求最优解。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二阶锥规划">
-<meta property="og:url" content="http://tanjialin.github.io/2019/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/index.html">
+<meta property="og:url" content="https://www.tanjialin.cn/2019/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/index.html">
 <meta property="og:site_name" content="明月入怀">
 <meta property="og:description" content="二阶锥规划(Second Order Cone Programming，SOCP)是凸优化问题的一个子集，通过引入二阶锥规划方法，可以解决大量优化设计问题，同时应用此方法，能解决方位估计算法包括旁瓣级、主瓣宽度、阵增益、稳健性在内的很多性能指标无法兼顾的问题，本部分介绍二阶锥规划优化设计方法，用于基于不同设计准则的空域矩阵滤波器求最优解。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://tanjialin.github.io/images/second_order_cone.png">
-<meta property="og:image" content="http://tanjialin.github.io/images/Snipaste_second_order.png">
-<meta property="og:image" content="http://tanjialin.github.io/images/Snipaste_second_1.png">
-<meta property="og:image" content="http://tanjialin.github.io/images/Snipaste_second_2.png">
-<meta property="og:image" content="http://tanjialin.github.io/images/Snipaste_second_3.png">
-<meta property="og:image" content="http://tanjialin.github.io/images/Snipaste_second_4.png">
+<meta property="og:image" content="https://www.tanjialin.cn/images/second_order_cone.png">
+<meta property="og:image" content="https://www.tanjialin.cn/images/Snipaste_second_order.png">
+<meta property="og:image" content="https://www.tanjialin.cn/images/Snipaste_second_1.png">
+<meta property="og:image" content="https://www.tanjialin.cn/images/Snipaste_second_2.png">
+<meta property="og:image" content="https://www.tanjialin.cn/images/Snipaste_second_3.png">
+<meta property="og:image" content="https://www.tanjialin.cn/images/Snipaste_second_4.png">
 <meta property="article:published_time" content="2019-04-02T15:58:19.000Z">
 <meta property="article:modified_time" content="2020-04-05T01:54:36.835Z">
 <meta property="article:author" content="Tan Jialin">
 <meta property="article:tag" content="凸优化">
 <meta property="article:tag" content="二阶锥">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://tanjialin.github.io/images/second_order_cone.png">
+<meta name="twitter:image" content="https://www.tanjialin.cn/images/second_order_cone.png">
 
-<link rel="canonical" href="http://tanjialin.github.io/2019/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/">
+<link rel="canonical" href="https://www.tanjialin.cn/2019/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/">
 
 
 <script id="page-configurations">
@@ -211,7 +211,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://tanjialin.github.io/2019/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/">
+    <link itemprop="mainEntityOfPage" href="https://www.tanjialin.cn/2019/04/02/%E4%BA%8C%E9%98%B6%E9%94%A5%E8%A7%84%E5%88%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
