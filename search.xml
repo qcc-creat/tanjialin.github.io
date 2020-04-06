@@ -122,6 +122,12 @@ W(\alpha ) = 0.5 - 0.5\cos [\pi (2\alpha  + \Phi )/\Phi ]\\
 <center>(b)不同深度宽度系数零陷对比曲线</center> 
 
 <p>上图中可以看出，零陷深度系数$d$不同时，零陷的深度会有差异，$d$越大，零陷越深，旁瓣会略有升高，同时在零陷的宽度系数保持不变时，仿真宽度保持不变；由图(b)得知算法可以同时针对宽度与深度参数进行调整，满足预期要求，需要指出，随着窗宽度和深度系数的提高，旁瓣会随之升高。 </p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>Mailloux R J. Covariance matrix augmentation to produce adaptive array pattern troughs[J]. Electronics Letters, 2002, 31(10):771-772.</li>
+<li>Zatman M. Production of adaptive array troughs by dispersion synthesis[J]. Electronics Letters, 1995, 31(25):2141-2142.</li>
+<li>Guerci J R. Theory and application of covariance matrix tapers for robust adaptive beamforming[J]. Signal Processing IEEE Transactions on, 2002, 47(4):977-985.</li>
+<li>Gu Y, Leshem A. Robust Adaptive Beamforming Based on Interference Covariance Matrix Reconstruction and Steering Vector Estimation[J]. IEEE Transactions on Signal Processing, 2012, 60(7):3881-3885.</li>
+</ol>
 ]]></content>
       <categories>
         <category>阵列信号处理</category>
@@ -180,6 +186,12 @@ a(\theta), & \theta \in \Theta_{P} \\
 <center>(b)信噪比不同情况下的估计标准差曲线</center> 
 
 <p>从图(a)、(b)中可以看出，当信噪比比较低时，预滤波MUSIC算法的估计偏差以及标准差明显低于MUSIC算法，随着信噪比的提高，差别越来越小。<br>由以上的仿真分析，该矩阵滤波器对阻带扇面内的噪声和干扰具有明显的抑制作用，提高了滤波器通带扇面内信号的方位分辨率，并且可以降低基于空域矩阵滤波方位估计时所使用算法的信噪比门限。</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li>Kobayashi K, Kim S, Kojima M. Correlative Sparsity in Primal-Dual Interior-Point Methods for LP, SDP, and SOCP (ENG)[J]. Applied Mathematics &amp; Optimization, 2008, 58(1):69-88.</li>
+<li>Sturm J F. Using SeDuMi 1.02, A Matlab toolbox for optimization over symmetric cones[J]. Optimization Methods &amp; Software, 1999, 11(1-4):625-653.</li>
+<li>Nesterov. Introductory Lectures on Convex Optimization: A Basic Course</li>
+<li>冯杰, 杨益新, 孙超. 自适应空域矩阵滤波器设计和目标方位估计[J]. 系统仿真学报, 2007, 19(20).</li>
+</ol>
 ]]></content>
       <categories>
         <category>阵列信号处理</category>
@@ -208,6 +220,9 @@ g - Fy \in  { \{ 0\} ^g }</script><p>其中零锥${\{ 0\} ^g}$，定义为：</p
 <p>线性规划和凸二次规划都属于二阶锥规划，同时，由于二阶锥规划约束可以表示为线性矩阵不等式，所以它也是半定规划的子集。 </p>
 <p><img src="/images/Snipaste_second_4.png" alt="img"> </p>
 <p>其中$I$表示单位矩阵<br>可以通过内点法求解二阶锥规划问题，例如SeDuMi，相比于半正定规划求解，通过这种方法求解此类优化问题速度更快。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>Nesterov. Introductory Lectures on Convex Optimization: A Basic Course</li>
+</ol>
 ]]></content>
       <categories>
         <category>数学</category>
@@ -250,6 +265,9 @@ R { \rm { = } } \sum\limits_ { i = 1 } ^M { { \lambda _i } }  { e_i } e_i^H</scr
 
 <p><img src="/images/MUSIC_5.png" alt="img"> </p>
 <p><center>不同信噪比估计标准差曲线</center><br>如以上两图所示，在上述条件下，对不同信噪比下的估计标准差以及估计偏差进行仿真。其中估计偏差为100次估计的方位偏离期望方位的平均值，估计标准差为对三个信号的估计偏差求平均标准差，随着信噪比提高，其估计偏差越来越小、并且出现估计偏差的概率会明显降低。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>王永良. 空间谱估计理论与算法[M]. 清华大学出版社, 2004.</li>
+</ol>
 ]]></content>
       <categories>
         <category>阵列信号处理</category>
@@ -262,7 +280,7 @@ R { \rm { = } } \sum\limits_ { i = 1 } ^M { { \lambda _i } }  { e_i } e_i^H</scr
   <entry>
     <title>常规波束形成</title>
     <url>/2018/03/27/%E5%B8%B8%E8%A7%84%E6%B3%A2%E6%9D%9F%E5%BD%A2%E6%88%90/</url>
-    <content><![CDATA[<p>波束形成是阵列信号处理算法中最为基础也是应用最为广泛的一种算法，如今依旧是水声方面信号处理的主要组成部分之一。波束形成算法的功能大致可以分为两个方面，一方面是为了获得较为理想的输出信噪比，另一方面是为了获得较高的DOA分辨能力。因此声呐要想具有良好性能，首先就要有一个性能优良的波束形成系统。<br><a id="more"></a><br>对于平面波而言，由于其幅度相同，所以到达基阵上的信号可以视为同一信号，但是由于各个阵元空间位置不同，导致对于同一时间接收到的信号，相对于参考阵元，各个阵元会有不同的到达时间延迟。如果采取方法对每个阵元的时延量进行补偿，再将各个阵元上的延迟信号求和，会形成一个标量输出，其目的就是形成这样一个波束，并将其扫描到一个特定的方向上。 </p>
+    <content><![CDATA[<p>波束形成是阵列信号处理算法中最为基础也是应用最为广泛的一种算法，如今依旧是水声方面信号处理的主要组成部分之一。波束形成算法的功能大致可以分为两个方面，一方面是为了获得较为理想的输出信噪比，另一方面是为了获得较高的DOA分辨能力。<br><a id="more"></a><br>对于平面波而言，由于其幅度相同，所以到达基阵上的信号可以视为同一信号，但是由于各个阵元空间位置不同，导致对于同一时间接收到的信号，相对于参考阵元，各个阵元会有不同的到达时间延迟。如果采取方法对每个阵元的时延量进行补偿，再将各个阵元上的延迟信号求和，会形成一个标量输出，其目的就是形成这样一个波束，并将其扫描到一个特定的方向上。 </p>
 <p>对于由$N$个间距为$d$，特性相同的传感器组成的均匀线列阵，如果信号的入射角度和阵列的法线方向的夹角为$\theta$，则每两个相邻的传感器收到的信号时间延迟为 </p>
 <script type="math/tex; mode=display">
 \tau { \rm { = } } \frac { \lambda } { c } d\sin \theta  = \frac { { 2\pi } } { w } d\sin \theta</script><p>式中，$c$为波速，$\lambda$为波长。<br>以第一个阵元为参考阵元，那么为了补偿各阵元时延，以形成一个主瓣，所以常规波束形成器的加权向量可以构造为</p>
@@ -287,6 +305,10 @@ R = E[X { X^H } ]</script><p>实际中接收的信号都是由快拍数构成的
 <center>角度(-5,2),sinr=10dB</center> 
 
 <p>在不同信号参数下，由常规波束形成法得到的空间方位谱分别在图(a)、(b)、(c)、(d)给出。当两个信号的入射角间隔${6^ \circ }$，信噪比为15dB时，如图(c)所示，已经无法正常分辨两个目标，保持信噪比不变，增大信号入射角度间隔至${7^ \circ }$，如图(b)，已经能够分辨两个目标，并且能给出目标正确的入射方向，如将间距增大到${10^ \circ }$，则图(a)，两个信号已经完全分离，在各自来波方向均有明显的峰，在将入射角度间距设置在${7^ \circ }$的情况下，令信噪比SNR下降至10dB，从图(d)中可以看到，由于入射的信号能量较低，输出数据的信噪比明显降低。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>Worsley K J, Evans A C, Marrett S, et al. A three-dimensional statistical analysis for CBF activation studies in human brain[J]. Journal of Cerebral Blood Flow &amp; Metabolism Official Journal of the International Society of Cerebral Blood Flow &amp; Metabolism, 1992, 12(6):900-18.</li>
+<li>孙超. 水下多传感器阵列信号处理[M]. 2007.</li>
+</ol>
 ]]></content>
       <categories>
         <category>阵列信号处理</category>
